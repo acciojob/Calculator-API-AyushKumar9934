@@ -18,12 +18,12 @@ app.post('/add',(req,res,next)=>{
   let num2=req.body.num2;
   if(num1<-1000000 || num2<-1000000){
 
-    res.send({status:"fauilure",message: "Underflow",  
+    res.send({status:"error",message: "Underflow",  
      })
   }
    if(num1>1000000 || num2>1000000){
 
-    res.send({status:"fauilure",message: "Overflow",  
+    res.send({status:"error",message: "Overflow",  
       })
   }
  if(typeof(num1)!='number' || typeof(num2)!='number'){
@@ -42,12 +42,12 @@ app.post('/sub',(req,res,next)=>{
   let num2=req.body.num2;
   if(num1<-1000000 || num2<-1000000){
 
-    res.send({status:"fauilure",message: "Underflow",  
+    res.send({status:"error",message: "Underflow",  
      })
   }
    if(num1>1000000 || num2>1000000){
 
-    res.send({status:"fauilure",message: "Overflow",  
+    res.send({status:"error",message: "Overflow",  
       })
   }
  if(typeof(num1)!='number' || typeof(num2)!='number'){
@@ -66,12 +66,12 @@ app.post('/multiply',(req,res,next)=>{
   let num2=req.body.num2;
   if(num1<-1000000 || num2<-1000000){
 
-    res.send({status:"fauilure",message: "Underflow",  
+    res.send({status:"error",message: "Underflow",  
      })
   }
    if(num1>1000000 || num2>1000000){
 
-    res.send({status:"fauilure",message: "Overflow",  
+    res.send({status:"error",message: "Overflow",  
       })
   }
  if(typeof(num1)!='number' || typeof(num2)!='number'){
@@ -90,12 +90,12 @@ app.post('/divide',(req,res,next)=>{
   let num2=req.body.num2;
   if(num1<-1000000 || num2<-1000000){
 
-    res.send({status:"fauilure",message: "Underflow",  
+    res.send({status:"error",message: "Underflow",  
      })
   }
    if(num1>1000000 || num2>1000000){
 
-    res.send({status:"fauilure",message: "Overflow",  
+    res.send({status:"error",message: "Overflow",  
       })
   }
  if(typeof(num1)!='number' || typeof(num2)!='number'){
@@ -105,14 +105,14 @@ app.post('/divide',(req,res,next)=>{
 
   }
  if(num2===0){
-  res.send({status:"failure",message:"Cannot divide by zero"})
+  res.send({status:"error",message:"Cannot divide by zero"})
 
  }
  else res.send({status:"success",message: "The division of given numbers",  
     result: num1/num2})
 })
 app.use('/',(req,res,next)=>{
-  res.send({status:"failure",message:"pageNotFound"})
+  res.send({status:"error",message:"pageNotFound"})
 
 })
  
