@@ -58,6 +58,10 @@ app.post('/sub',(req,res,next)=>{
     })
 
   }
+  if(num2>num1){
+    res.send({status:"error",message:"Cannot divide by zero"})
+  
+   }
  
   else res.send({status:"success",message: "the difference of given two numbers",  
     difference: num1-num2})
