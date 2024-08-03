@@ -22,12 +22,12 @@ app.post('/add',(req,res,next)=>{
     res.send({status:"error",message: "Underflow",  
      })
   }
-   if(num1>1000000 || num2>1000000){
+  else  if(num1>1000000 || num2>1000000){
 
     res.send({status:"error",message: "Overflow",  
       })
   }
- if(typeof(num1)!='number' || typeof(num2)!='number'){
+else if(typeof(num1)!='number' || typeof(num2)!='number'){
    
     res.send({status:"error",message: "Invalid data types",  
     })
@@ -47,21 +47,18 @@ app.post('/sub',(req,res,next)=>{
     res.send({status:"error",message: "Underflow",  
      })
   }
-   if(num1>1000000 || num2>1000000){
+  else  if(num1>1000000 || num2>1000000){
 
     res.send({status:"error",message: "Overflow",  
       })
   }
- if(typeof(num1)!='number' || typeof(num2)!='number'){
+ else if(typeof(num1)!='number' || typeof(num2)!='number'){
     console.log(typeof(num1))
     res.send({status:"error",message: "Invalid data types",  
     })
 
   }
-  if(num2>num1){
-    res.send({status:"error",message:"Cannot divide by zero"})
   
-   }
  
   else res.send({status:"success",message: "the difference of given two numbers",  
     difference: num1-num2})
@@ -75,12 +72,12 @@ app.post('/multiply',(req,res,next)=>{
     res.send({status:"error",message: "Underflow",  
      })
   }
-   if(num1>1000000 || num2>1000000){
+   else if(num1>1000000 || num2>1000000){
 
     res.send({status:"error",message: "Overflow",  
       })
   }
- if(typeof(num1)!='number' || typeof(num2)!='number'){
+ else if(typeof(num1)!='number' || typeof(num2)!='number'){
     console.log(typeof(num1))
     res.send({status:"error",message: "Invalid data types",  
     })
@@ -99,18 +96,18 @@ app.post('/divide',(req,res,next)=>{
     res.send({status:"error",message: "Underflow",  
      })
   }
-   if(num1>1000000 || num2>1000000){
+   else if(num1>1000000 || num2>1000000){
 
     res.send({status:"error",message: "Overflow",  
       })
   }
- if(typeof(num1)!='number' || typeof(num2)!='number'){
+else  if(typeof(num1)!='number' || typeof(num2)!='number'){
     console.log(typeof(num1))
     res.send({status:"error",message: "Invalid data types",  
     })
 
   }
- if(num2===0){
+ else if(num2===0){
   res.send({status:"error",message:"Cannot divide by zero"})
 
  }
