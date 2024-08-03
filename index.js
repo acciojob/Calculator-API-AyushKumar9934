@@ -16,7 +16,7 @@ app.post('/add',(req,res,next)=>{
   let num1=req.body.num1;
 
   let num2=req.body.num2;
-  if(!num1 || !num2)res.send({status:"error",message:"parameter is missing"})
+  
   if(num1<-1000000 || num2<-1000000){
 
     res.send({status:"error",message: "Underflow",  
@@ -38,7 +38,6 @@ app.post('/add',(req,res,next)=>{
     sum: num1+num2})
 })
 app.post('/sub',(req,res,next)=>{
-  if(!num1 || !num2)res.send({status:"error",message:"parameter is missing"})
   let num1=req.body.num1;
 
   let num2=req.body.num2;
@@ -64,7 +63,6 @@ app.post('/sub',(req,res,next)=>{
     difference: num1-num2})
 })
 app.post('/multiply',(req,res,next)=>{
-  if(!num1 || !num2)res.send({status:"error",message:"parameter is missing"})
   let num1=req.body.num1;
 
   let num2=req.body.num2;
@@ -89,7 +87,6 @@ app.post('/multiply',(req,res,next)=>{
     result: num1*num2})
 })
 app.post('/divide',(req,res,next)=>{
-  if(!num1 || !num2)res.send({status:"error",message:"parameter is missing"})
   let num1=req.body.num1;
 
   let num2=req.body.num2;
